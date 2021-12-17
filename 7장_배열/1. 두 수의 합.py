@@ -66,5 +66,3 @@ t2 = time.time()
 
 duration = t2 - t1
 print(duration, '초')
-
-print('hello')
