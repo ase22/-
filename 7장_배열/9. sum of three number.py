@@ -28,7 +28,7 @@ def sumOfThreeNumber(nums):
 
 print(sumOfThreeNumber(nums))
 
-# 브투르 포스로 계산
+# 1. 브루트 포스로 계산
 
 def threeSum(nums):
   results = []
@@ -50,7 +50,7 @@ def threeSum(nums):
   
   return results
 
-# 투 포인터로 합 계산
+# 2. 투 포인터로 합 계산
 # 오름차순으로 정렬해준다.
 # 일단 제일 첫번째 숫자는 for문으로 index = 0부터 index = len(nums) - 3까지 돌리는데,
 # 이 for문 안에서 left와 right가 각 i마다 투포인터로 돼서 sum = 0인 숫자쌍을 찾는다.
