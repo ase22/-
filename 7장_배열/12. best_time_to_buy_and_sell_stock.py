@@ -12,7 +12,7 @@ def myFunc(nums):
 
 print(myFunc(nums))
 
-# 예시풀이1. 브루트 포스토 계산
+# 예시풀이1. 브루트 포스 계산
 def maxProfit(nums):
   max_price = 0
 
