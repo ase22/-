@@ -37,4 +37,3 @@ def mergeTwoLists(list1Node1, list2Node1):
 
 mergeTwoLists(list1.head, list2.head)
 print(list1.head.val, list1.head.next.val, list1.head.next.next.val, list1.head.next.next.next.val, list1.head.next.next.next.next.val, list1.head.next.next.next.next.next.val)
-
