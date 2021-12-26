@@ -65,7 +65,6 @@ def toReversedLinkedList(numberString):
 def addTwoNumber(l1, l2):
   num1 = 0
   num2 = 0
-
   index = 0
 
   while l1:
@@ -90,7 +89,37 @@ def addTwoNumber(l1, l2):
     prev = node
 
   print(node.val, node.next.val, node.next.next.val)
+  
 addTwoNumber(Llist1.head, Llist2.head)
+
+def practice(l1, l2):
+  num1 = 0
+  num2 = 0
+  index = 0
+
+  while l1:
+    num1 += l1.val * (10**index)
+    l1 = l1.next
+    index += 1
+  
+  index = 0
+  
+  while l2:
+    num2 += l2.val * (10**index)
+    l2 = l2.next
+    index += 1
+  
+  numberString = str(num1 + num2)
+
+  prev = None
+
+  for number in numberString:
+    node = Node(number)
+    node.next = prev
+    prev = node
+  
+  return node
+
 
 
 
