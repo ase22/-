@@ -1,6 +1,4 @@
 import collections
-from typing import Collection
-
 
 from collections import Counter
 
