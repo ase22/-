@@ -35,7 +35,7 @@ class MyHashMap:
         break
 
       p = p.next
-      p.next = Node(key, value)
+    p.next = Node(key, value)
   
   def get(self, key):
     index = key % self.size
