@@ -1,6 +1,6 @@
 import itertools
 
-n, k = 6, 3
+n, k = 4, 2
 
 # 내 풀이
 # elements의 길이가 k일 때 results에 넣고 탈출
@@ -34,6 +34,7 @@ def combine(n, k):
   def dfs(elements, start, k):
     if k == 0:
       results.append(elements[:])
+      return
 
     # 자신 이전의 모든 값을 고정하여 재귀 호출
     for i in range(start, n + 1):
