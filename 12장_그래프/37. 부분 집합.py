@@ -65,6 +65,3 @@ def practice(nums):
   return results
 
 print(practice(nums))
-
-
-  
