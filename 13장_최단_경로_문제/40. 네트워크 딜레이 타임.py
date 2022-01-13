@@ -157,3 +157,28 @@ def practice2(times, N, K):
   if len(dist) == N:
     return max(dist.values())
   return -1
+
+
+def practice4(times, N, K):
+  graph = collections.defaultdict(list)
+
+  for u, v, w in times:
+    graph[u].append((v, w))
+  
+  dist = collections.defaultdict(list)
+
+  Q = [(0, K)]
+
+  while Q:
+    time, node = heapq.heappop(Q)
+
+    if node not in dist:
+      dist[node] = time
+      for v, w in graph[node]:
+        alt = time + w
+        heapq.heappush(Q, (alt, v))
+  
+  if len(dist) == N:
+    return max(dist.values())
+  
+print(practice4(times2, 8, 3))
