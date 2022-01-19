@@ -66,6 +66,4 @@ class ex1:
 
       return node
     else:
-      return t1 or t2
-
-print( 0 or 2)
+      return t1 or t2 # 존재하는 노드를 리턴한다.
