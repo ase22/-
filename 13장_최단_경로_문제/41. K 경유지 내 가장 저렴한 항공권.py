@@ -1,7 +1,12 @@
 # 시작점에서 도착점까지의 가장 저렴한 가격을 계산하되, K개의 경유지 이내에 도착하는 가격을 리턴하라. 경로가 존재하지 않을 경우 -1을 리턴한다.
+# 전에 구현했던 다익스트라 알고리즘을 가져와서 수정한다.
+
+# 추가해야할 기능들
+# 1. 도착점
+# 2. K개 경유지 이내 도착
+# 3. 경로가 존재하지 않을 경우 -1 리턴
 import collections
 import heapq
-
 
 n = 3
 edges = [
@@ -38,16 +43,12 @@ def cheapestTicket(n, edges, src, dst, k):
         heapq.heappush(Q, (alt, v))
   
   return -1
-# 추가해야할 기능들
-# 1. 도착점
-# 2. K개 경유지 이내 도착
-# 3. 경로가 존재하지 않을 경우 -1 리턴
 
 print(cheapestTicket(n, edges, src, dst, k))
 
+
 # 예시 풀이 1. 다익스트라 알고리즘 응용
 # 큐에 추가할 때 K 이내일 때만 경로를 추가해서 K를 넘어서는 경로는 더 이상 탐색되지 않게 하면 된다.
-
 def findCheapestPrice(n, flights, src, dst, K):
   graph = collections.defaultdict(list)
 
