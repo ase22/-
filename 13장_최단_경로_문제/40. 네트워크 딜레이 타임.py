@@ -23,7 +23,7 @@ def networkDelayTime(N, K, times):
 
   for x, y, z in times:
     path[x].append([y, z])
-  
+
   visited = set()
 
   def dfs(i, time):
@@ -83,7 +83,7 @@ def networkDelayTime3(times, N, K):
   # 그래프 인접 리스트 구성
   for u, v, w in times:
     graph[u].append((v, w))
-  
+
   # 큐 변수: [(소요 시간, 정점)]
   Q = [(0, K)]
   dist = collections.defaultdict(int)
@@ -98,7 +98,7 @@ def networkDelayTime3(times, N, K):
       for v, w in graph[node]:
         alt = time + w
         heapq.heappush(Q, (alt, v))
-  
+
   # 모든 노드의 최단 경로 존재 여부 판별
   if len(dist) == N:
     return max(dist.values())
@@ -140,7 +140,7 @@ def practice2(times, N, K):
   for u, v, w in times:
     graph[u].append((v, w))
 
-  dist = collections.defaultdict(list)  
+  dist = collections.defaultdict(list)
 
   Q = [(0, K)]
 
@@ -153,7 +153,7 @@ def practice2(times, N, K):
       for v, w in graph[node]:
         alt = time + w
         heapq.heappush((alt, v))
-  
+
   if len(dist) == N:
     return max(dist.values())
   return -1
@@ -164,7 +164,7 @@ def practice4(times, N, K):
 
   for u, v, w in times:
     graph[u].append((v, w))
-  
+
   dist = collections.defaultdict(list)
 
   Q = [(0, K)]
@@ -177,8 +177,8 @@ def practice4(times, N, K):
       for v, w in graph[node]:
         alt = time + w
         heapq.heappush(Q, (alt, v))
-  
+
   if len(dist) == N:
     return max(dist.values())
-  
+
 print(practice4(times2, 8, 3))
