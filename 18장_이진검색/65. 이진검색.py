@@ -51,7 +51,7 @@ class ex1:
   def search(self, nums: list[int], target: int) -> int:
     def binary_search(left, right):
       if left <= right:
-        mid = (left + right) // 2
+        mid = left + (right - left) // 2 # (left + right) // 2 를 하면 left + right를 할 때 오버플로우가 발생할 수 있으므로 위 식으로 교체되었다.
 
         if nums[mid] < target:
           return binary_search(mid + 1, right)
