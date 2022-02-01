@@ -1,5 +1,4 @@
 import collections
-from gc import collect
 import math
 nodes = [3, 9, 20, None, None, 15, 7]
 

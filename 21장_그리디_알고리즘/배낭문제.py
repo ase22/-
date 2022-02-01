@@ -1,6 +1,3 @@
-from turtle import back
-
-
 cargo = [
   (4, 12),
   (2, 1),

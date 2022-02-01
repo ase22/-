@@ -68,7 +68,7 @@ print(s.invertBinaryTree(root))
 class ex1:
   def invertTree(self, root: TreeNode) -> TreeNode:
     if root:
-      root.left, root.riht = \
+      root.left, root.right = \
         self.invertTree(root.right), self.inverTree(root.left)
       return root
     return None
@@ -114,7 +114,6 @@ class ex3:
     return root
 
 # 예시 풀이 4. 반복 구조로 DFS 후위 순회
-# 자식 순서 바꾸는 코드가 뒤로 갔는데 무슨 차이인지 모르겠다.
 class ex3:
   def invertTree(self, root: TreeNode) -> TreeNode:
     stack = collections.deque([root])

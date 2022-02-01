@@ -14,7 +14,7 @@ function fillinBackpack(cargo, capacity) {
 
   const pack = cargo.map(item => [item[0] / item[1], item[0], item[1]]).sort((a, b) => b[0] - a[0]);
 
-  for (item of pack) {
+  for (const item of pack) {
     if ((backpackCapacity - item[2]) >= 0) {
       backpackCapacity -= item[2];
       money += item[1];

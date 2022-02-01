@@ -2,7 +2,7 @@
 
 import collections
 
-nums = [2, 2, 1]
+nums = [2, 1, 2]
 
 # collections.Counter로 개수 센 후 값이 1인 키값 추출
 class Solution:
@@ -13,9 +13,6 @@ class Solution:
 
     return number.pop()
 
-s = Solution()
-
-print(s.singleNumber(nums))
 
 # 예시 풀이 1. XOR 풀이
 class ex1:
@@ -27,3 +24,7 @@ class ex1:
     
     return result
 
+
+s = ex1()
+
+print(s.singleNumber(nums))
